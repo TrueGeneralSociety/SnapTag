@@ -631,6 +631,122 @@ h3 {
   color: #fff;
 }
 
+/* ---------- Login + signup ---------- */
+/* same blurred photo + navy wash as the landing hero */
+.auth {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 64px);
+  padding: 3rem var(--gutter);
+  background: var(--navy-2);
+}
+
+.auth::before {
+  content: "";
+  position: absolute;
+  inset: -40px;
+  z-index: -2;
+  background: url("../site_images/index_background.jpg") center / cover
+    no-repeat;
+  filter: blur(var(--hero-blur));
+}
+
+.auth::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgba(11, 37, 69, 0.5),
+    rgba(11, 37, 69, 0.8)
+  );
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 26rem;
+  padding: 2.25rem 2rem;
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.35);
+}
+
+.auth-card h1 {
+  font-size: clamp(1.8rem, 5vw, 2.2rem);
+}
+
+.auth-sub {
+  margin: 0.4rem 0 1.75rem;
+  color: var(--muted);
+}
+
+.auth-form {
+  display: grid;
+  gap: 1.1rem;
+}
+
+.field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.field label {
+  font-weight: 700;
+}
+
+.field input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg);
+  color: var(--text);
+  font: inherit;
+}
+
+.field input:focus-visible {
+  border-color: var(--teal);
+  background: var(--surface);
+}
+
+.field small {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.btn-block {
+  width: 100%;
+  margin-top: 0.4rem;
+  text-align: center;
+}
+
+.auth-status {
+  margin: 0;
+  color: var(--teal-dark);
+  font-size: 0.95rem;
+}
+
+.auth-status:empty {
+  display: none;
+}
+
+.auth-switch {
+  margin: 1.5rem 0 0;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  text-align: center;
+}
+
+.auth-switch a {
+  color: var(--teal-dark);
+  font-weight: 700;
+}
+
 /* ---------- Motion + small screens ---------- */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -643,5 +759,13 @@ h3 {
 @media (max-width: 520px) {
   .brand {
     font-size: 1.3rem;
+  }
+
+  .site-header nav a {
+    padding: 0.4rem 0.7rem;
+  }
+
+  .auth-card {
+    padding: 1.75rem 1.25rem;
   }
 }
