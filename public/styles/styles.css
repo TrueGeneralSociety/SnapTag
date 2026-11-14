@@ -285,6 +285,78 @@ h3 {
   text-align: center;
 }
 
+/* ---------- Gallery: upload box (display only for now) ---------- */
+.upload {
+  max-width: 1280px;
+  margin: 0 auto 1.75rem;
+  padding: 0 var(--gutter);
+}
+
+.dropzone {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.25rem;
+  padding: 1.25rem 1.5rem;
+  border: 2px dashed var(--teal);
+  border-radius: var(--radius);
+  background: var(--surface);
+  transition:
+    background-color 0.18s,
+    border-color 0.18s;
+}
+
+.dropzone.is-over {
+  border-color: var(--amber);
+  background: #fff8f0;
+}
+
+.dropzone-text {
+  flex: 1 1 18rem;
+}
+
+.dropzone-text h2 {
+  font-size: 1.3rem;
+}
+
+.dropzone-text p {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+
+.btn-outline,
+.btn-solid {
+  border: 2px solid var(--teal-dark);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--teal-dark);
+}
+
+.btn-outline:hover {
+  background: #e1f0f0;
+}
+
+.btn-solid {
+  background: var(--teal-dark);
+  color: #fff;
+}
+
+.btn-solid:hover {
+  background: var(--navy);
+  border-color: var(--navy);
+}
+
+.sr-only:focus-visible + .btn-outline {
+  outline: 3px solid var(--amber);
+  outline-offset: 2px;
+}
+
 /* ---------- Gallery: header + toolbar ---------- */
 .page-head,
 .toolbar,

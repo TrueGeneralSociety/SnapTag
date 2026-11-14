@@ -39,6 +39,40 @@
         <p>Browse your photos by what's in them.</p>
       </section>
 
+      <section class="upload" aria-labelledby="upload-title">
+        <form id="upload-form" class="dropzone">
+          <div class="icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <polyline points="16 16 12 12 8 16" />
+              <line x1="12" y1="12" x2="12" y2="21" />
+              <path d="M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3" />
+            </svg>
+          </div>
+          <div class="dropzone-text">
+            <h2 id="upload-title">Add a photo</h2>
+            <p id="upload-file">
+              Drag an image here or choose a file. SnapTag will tag it for you.
+            </p>
+          </div>
+          <input
+            id="photo-input"
+            class="sr-only"
+            type="file"
+            accept="image/*"
+          />
+          <label class="btn btn-outline" for="photo-input">Choose file</label>
+          <button class="btn btn-solid" type="submit">Upload</button>
+        </form>
+      </section>
+
       <section class="toolbar" aria-label="Search and filter">
         <div class="search">
           <svg

@@ -205,6 +205,42 @@ els.search.addEventListener("input", () => {
   render();
 });
 
+// ---------- upload box (display only: nothing is sent anywhere yet) ----------
+const upload = {
+  form: $("upload-form"),
+  input: $("photo-input"),
+  text: $("upload-file"),
+};
+const defaultUploadText = upload.text.textContent;
+
+function showChosen(files) {
+  upload.text.textContent = files.length
+    ? `Selected: ${files[0].name}`
+    : defaultUploadText;
+}
+
+upload.input.addEventListener("change", () => showChosen(upload.input.files));
+
+["dragenter", "dragover"].forEach((type) =>
+  upload.form.addEventListener(type, (e) => {
+    e.preventDefault(); // stops the browser from opening the dropped image
+    upload.form.classList.add("is-over");
+  }),
+);
+["dragleave", "drop"].forEach((type) =>
+  upload.form.addEventListener(type, (e) => {
+    e.preventDefault();
+    upload.form.classList.remove("is-over");
+  }),
+);
+upload.form.addEventListener("drop", (e) => {
+  upload.input.files = e.dataTransfer.files;
+  showChosen(upload.input.files);
+});
+
+// Later: send the file to the backend here, e.g. fetch("/api/upload", { method: "POST", body: new FormData(upload.form) })
+upload.form.addEventListener("submit", (e) => e.preventDefault());
+
 // ---------- load ----------
 async function load() {
   try {
