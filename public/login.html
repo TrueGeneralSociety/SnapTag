@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SnapTag - Login</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <script src="scripts/navbar.js"></script>
+
+    <main class="auth">
+      <section class="auth-card" aria-labelledby="auth-title">
+        <h1 id="auth-title">Welcome back</h1>
+        <p class="auth-sub">Sign in to see and tag your photos.</p>
+
+        <form class="auth-form" data-auth-form>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              required
+            />
+          </div>
+          <button class="btn btn-solid btn-block" type="submit">Sign in</button>
+          <p class="auth-status" aria-live="polite" data-auth-status></p>
+        </form>
+
+        <p class="auth-switch">
+          New to SnapTag? <a href="signup.html">Create an account</a>
+        </p>
+      </section>
+    </main>
+
+    <script src="scripts/auth.js"></script>
+  </body>
+</html>

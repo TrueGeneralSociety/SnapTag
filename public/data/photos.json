@@ -1,0 +1,62 @@
+[
+  {
+    "file": "golden-retriever.jpg",
+    "title": "Golden retriever in the grass",
+    "tags": ["dog", "pet", "animal", "canine", "grass", "outdoors"]
+  },
+  {
+    "file": "beach-sunset.jpg",
+    "title": "Sunset over the beach",
+    "tags": ["beach", "sunset", "ocean", "sky", "sand", "outdoors"]
+  },
+  {
+    "file": "mountain-lake.jpg",
+    "title": "Mountain lake",
+    "tags": ["mountain", "lake", "water", "nature", "landscape", "outdoors"]
+  },
+  {
+    "file": "city-skyline.jpg",
+    "title": "City skyline",
+    "tags": ["city", "skyline", "building", "architecture", "urban"]
+  },
+  {
+    "file": "coffee-latte.jpg",
+    "title": "Latte on a cafe table",
+    "tags": ["coffee", "cup", "drink", "cafe", "indoors"]
+  },
+  {
+    "file": "pizza.jpg",
+    "title": "Fresh pizza",
+    "tags": ["pizza", "food", "meal", "cheese", "indoors"]
+  },
+  {
+    "file": "cat-window.jpg",
+    "title": "Cat by the window",
+    "tags": ["cat", "pet", "animal", "window", "indoors"]
+  },
+  {
+    "file": "bicycle-street.jpg",
+    "title": "Bicycle on a city street",
+    "tags": ["bicycle", "street", "city", "urban", "outdoors"]
+  },
+  {
+    "file": "forest-trail.jpg",
+    "title": "Forest trail",
+    "tags": ["forest", "tree", "trail", "nature", "outdoors"]
+  },
+  {
+    "file": "friends-picnic.jpg",
+    "title": "Friends having a picnic",
+    "tags": ["people", "picnic", "food", "grass", "outdoors"]
+  },
+  {
+    "file": "beach-dog.jpg",
+    "title": "Dog running on the beach",
+    "tags": ["dog", "beach", "pet", "sand", "outdoors"]
+  },
+  {
+    "file": "laptop-desk.jpg",
+    "title": "Laptop on a desk",
+    "tags": ["laptop", "computer", "desk", "technology", "indoors"]
+  }
+]
